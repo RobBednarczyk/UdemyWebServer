@@ -4,6 +4,10 @@ const hbs = require("hbs");
 // load the fs module to store the log with all the request in a files
 const fs = require("fs");
 
+// store the port no. for heroku deployment
+// heroku will set the PORT variable, otherwise run locally on 3000
+const port = process.env.PORT || 3000;
+
 var app = express();
 
 // set the partials - code reused
@@ -73,6 +77,6 @@ app.get("/bad", (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log("Server is up on port 3000");
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`);
 });

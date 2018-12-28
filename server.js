@@ -62,6 +62,14 @@ app.get("/", (req, res) => {
     });
 });
 
+// set up a project webpage
+app.get("/projects", (req, res) => {
+    res.render("projects.hbs", {
+        pageTitle: "Projects page",
+        welcomeMessage: "This is my portfolio page"
+    })
+})
+
 app.get("/about", (req, res) => {
     //res.send("About Page");
     // render any of the set up templates with the current view engine

@@ -1,7 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 
-// load the fs module to store the log with all the request in a files
+// load the fs module to store the log with all the requests in a file
 const fs = require("fs");
 
 // store the port no. for heroku deployment
